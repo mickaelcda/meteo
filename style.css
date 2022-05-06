@@ -12,10 +12,10 @@ body {
 }
 .container {
     width: 800px ;
-    height: 600px;
+    height: 700px;
     background: linear-gradient(45deg, rgb(100, 170, 199), rgb(237, 109, 233));
     display: grid;
-    grid-template: 100px 300px 100px 100px / repeat(8,100px);
+    grid-template: 100px 300px 100px 100px 100px / repeat(8,100px);
     margin: 100px auto;
     position: relative;
     border: 1px solid #f1f1f1;
@@ -45,7 +45,7 @@ h1 {
     width: 50%;
 }
 .bloc-info .temps { 
-    font-size: 40px ;
+    font-size: 35px ;
 }
 .bloc-info .temps::first-letter{
     text-transform: capitalize;
@@ -56,4 +56,48 @@ h1 {
 .bloc-info .localisation {
     font-size: 40px;
     word-wrap: break-word;
+}
+.bloc-info-hydro-vent {
+    grid-area: 3 / 1 / 4 / -1 ;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 1px solid #f1f1f1;
+    /* border-bottom: 1px solid #f1f1f1; */
+}
+.bloc-info-hydro-vent p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+}
+.bloc-info-hydro , .bloc-info-vent {
+    display: grid;
+    grid-template: 100px / 400px;
+    /* border: 1px solid #f1f1f1; */
+}
+.bloc-info-hydro {
+    border-right: 1px solid #f1f1f1;
+}
+
+.heure-bloc-prevision {
+    grid-area: 4 / 1 / 5 /-1;  
+}
+.jour-bloc-prevision {
+    grid-area: 5 / 1 / 6 /-1;
+}
+.jour-bloc-prevision , .heure-bloc-prevision {
+    display: grid;
+    grid-template: 100px / repeat(7, 1fr);
+}
+.bloc-h , .bloc-j {
+display: flex;
+align-items: center;
+justify-content: center;
+border-top: 1px solid #f1f1f1;
+}
+
+.bloc-h:not(:last-child) , .bloc-j:not(:last-child) {
+border-right: 1px solid #f1f1f1;
 }

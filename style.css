@@ -64,7 +64,7 @@ h1 {
     justify-content: space-around;
     align-items: center;
     border-top: 1px solid #f1f1f1;
-    /* border-bottom: 1px solid #f1f1f1; */
+    
 }
 .bloc-info-hydro-vent p {
     display: flex;
@@ -95,9 +95,13 @@ h1 {
 display: flex;
 align-items: center;
 justify-content: center;
+flex-direction: column;
 border-top: 1px solid #f1f1f1;
 }
 
 .bloc-h:not(:last-child) , .bloc-j:not(:last-child) {
 border-right: 1px solid #f1f1f1;
+}
+.bloc-h p, .bloc-j p {
+    margin: 5px;
 }
